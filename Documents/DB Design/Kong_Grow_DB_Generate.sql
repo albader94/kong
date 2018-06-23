@@ -8,17 +8,17 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema Kong
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema Kong
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `Kong` DEFAULT CHARACTER SET utf8 ;
 USE `Kong` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`Login`
+-- Table `Kong`.`Login`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Kong`.`Login` (
   `UserID` INT NOT NULL AUTO_INCREMENT COMMENT 'Surrogate key',
@@ -30,7 +30,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Sensor`
+-- Table `Kong`.`Sensor`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Kong`.`Sensor` (
   `SensorID` INT NOT NULL AUTO_INCREMENT COMMENT 'Surrogate key',
