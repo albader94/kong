@@ -25,7 +25,8 @@ CREATE TABLE IF NOT EXISTS `Kong`.`Login` (
   `Username` VARCHAR(45) NOT NULL,
   `Password` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`UserID`),
-  UNIQUE INDEX `UserID_UNIQUE` (`UserID` ASC))
+  UNIQUE INDEX `UserID_UNIQUE` (`UserID` ASC),
+  UNIQUE INDEX `Username_UNIQUE` (`Username` ASC))
 ENGINE = InnoDB;
 
 
