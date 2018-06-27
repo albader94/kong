@@ -17,7 +17,7 @@ temp_sensor = '/sys/bus/w1/devices/28-0000098ff2bd/w1_slave'
 #
 
 # Variables for MySQL
-db = MySQLdb.connect(host="localhost", user="root",passwd="raspberry", db="tempVals")
+db = MySQLdb.connect(host="localhost", user="root",passwd="raspberry", db="kong")
 cur = db.cursor()
 
 # Function that reads temperatue from the tempereture sensor
@@ -49,8 +49,10 @@ while True:
     # TODO: 3. call humidity function and store in variable, and add cell to hold humidity value
     #
     #
+    humidity = 0.999
+    print humidity
     
-    sql = ("""INSERT INTO tempLog (datetime,temperature) VALUES (%s,%s)""",(datetimeWrite,temp))
+    sql = ("""INSERT INTO Sensor (SensorDT,SensorTemperature,SensorHumidity) VALUES (%s,%s,%s)""",(datetimeWrite,temp,humidity))
     try:
         print "Writing to database..."
         # Execute the SQL command
