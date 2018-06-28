@@ -734,8 +734,8 @@ pre code {
 }
 
 .col-12 {
-  flex: 0 0 200%;
-  max-width: 200%;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
 .order-1 {

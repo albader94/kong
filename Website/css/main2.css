@@ -1918,7 +1918,9 @@ nav {
   }
 }
 
-
+nav.hide {
+  transform: scale(0);
+}
 
 nav a {
   color: #fff;
