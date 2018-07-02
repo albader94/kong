@@ -28,6 +28,10 @@
 			<link rel="stylesheet" href="css/main2.css">
 		</head>
 		<body>
+		<script src="Highcharts/code/highcharts.js"></script>
+		<script src="Highcharts/code/modules/series-label.js"></script>
+		<script src="Highcharts/code/modules/exporting.js"></script>
+		<script src="Highcharts/code/modules/export-data.js"></script>
 			<!-- Start Header Area -->
 			<header class="default-header" style="background-image: -moz-linear-gradient(0deg, #691cff 0%, #f51cb0 100%);
   background-image: -webkit-linear-gradient(0deg, #691cff 0%, #f51cb0 100%);
@@ -59,26 +63,266 @@
 				<div class="container-fluid">
 					<div class="row  d-flex justify-content-start align-items-center">
 						<div class="col-lg-6 col-md-12 no-padding">
-							<img class="img-fluid" src="img/temp.jpg" alt="">
+							<div id="chart-A"></div>
+
+
+
+							<script type="text/javascript">
+
+Highcharts.chart('chart-A', {
+    chart: {
+        zoomType: 'xy'
+    },
+    title: {
+        text: 'Daily Temperature and Humidity Overview'
+    },
+    xAxis: [{
+        categories: ['0:00', '2:00', '4:00', '6:00', '8:00', '10:00',
+            '12:00', '14:00', '16:00', '18:00', '20:00', '22:00'],
+        crosshair: true
+    }],
+    yAxis: [{ // Primary yAxis
+        labels: {
+            format: '{value}°C',
+            style: {
+                color: Highcharts.getOptions().colors[2]
+            }
+        },
+        title: {
+            text: 'Temperature',
+            style: {
+                color: Highcharts.getOptions().colors[2]
+            }
+        },
+        opposite: true
+
+    }, { // Secondary yAxis
+        gridLineWidth: 0,
+        title: {
+            text: 'Humidity',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        labels: {
+            format: '{value} %',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        }
+
+    }],
+    tooltip: {
+        shared: true
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'left',
+        x: 80,
+        verticalAlign: 'top',
+        y: 55,
+        floating: true,
+        backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+    },
+    series: [{
+        name: 'Humidity',
+        type: 'column',
+        yAxis: 1,
+        data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+        tooltip: {
+            valueSuffix: ' %'
+        }
+
+    }, {
+        name: 'Temperature',
+        type: 'spline',
+        data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+        tooltip: {
+            valueSuffix: ' °C'
+        }
+    }]
+});
+		</script>
 						</div>
 						<div class="about-details col-lg-4 col-md-12">
 							<h2>
-								<span>Kong Grow,</span> the <span>premiere</span>
-								remote greenhouse monitoring software. 
+								<span>Current Temperature: </span> %t
 							</h2>
-							<p>
-								Kong Grow allows real-time and historic monitoring
-								of conditions within your growing environment for 
-								unparalleled grow results.
-								Never worry about temperature and humidity levels 
-								again with constant monitoring and achive new levels
-								of plant health by analyzing historic data to determine
-								ideal planting and feeding cycles.
-							</p>
+							<h2>
+								<span>Current Humidity: </span> %h
+							</h2>
 						</div>
 					</div>
 				</div>
+				<div class="container-fluid">
+					<div class="row  d-flex justify-content-start align-items-center">
+						<div class="col-lg-6 col-md-12 no-padding">
+							<div id="chart-B"></div>
+
+
+
+							<script type="text/javascript">
+
+Highcharts.chart('chart-B', {
+    chart: {
+        zoomType: 'xy'
+    },
+    title: {
+        text: 'Weekly Temperature and Humidity Overview'
+    },
+    xAxis: [{
+        categories: ['Sun 0:00', 'Sun 12:00', 'Mon 0:00', 'Mon 12:00', 'Tues 0:00', 'Tues 12:00',
+            'Wed 0:00', 'Wed 12:00', 'Thurs 0:00', 'Thurs 12:00', 'Fri 0:00', 'Fri 12:00'],
+        crosshair: true
+    }],
+    yAxis: [{ // Primary yAxis
+        labels: {
+            format: '{value}°C',
+            style: {
+                color: Highcharts.getOptions().colors[2]
+            }
+        },
+        title: {
+            text: 'Temperature',
+            style: {
+                color: Highcharts.getOptions().colors[2]
+            }
+        },
+        opposite: true
+
+    }, { // Secondary yAxis
+        gridLineWidth: 0,
+        title: {
+            text: 'Humidity',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        labels: {
+            format: '{value} %',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        }
+
+    }],
+    tooltip: {
+        shared: true
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'left',
+        x: 80,
+        verticalAlign: 'top',
+        y: 55,
+        floating: true,
+        backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+    },
+    series: [{
+        name: 'Humidity',
+        type: 'column',
+        yAxis: 1,
+        data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+        tooltip: {
+            valueSuffix: ' %'
+        }
+
+    }, {
+        name: 'Temperature',
+        type: 'spline',
+        data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+        tooltip: {
+            valueSuffix: ' °C'
+        }
+    }]
+});
+		</script>
+						</div>
+						<div id="chart-C"></div>
+
+
+
+						<script type="text/javascript">
+
+Highcharts.chart('chart-C', {
+    chart: {
+        zoomType: 'xy'
+    },
+    title: {
+        text: 'Monthly Temperature and Humidity Overview'
+    },
+    xAxis: [{
+        categories: ['Last Mon', 'Last Tues', 'Last Wed', 'Last Thurs', 'Last Fri', 'Sat',
+            'Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri'],
+        crosshair: true
+    }],
+    yAxis: [{ // Primary yAxis
+        labels: {
+            format: '{value}°C',
+            style: {
+                color: Highcharts.getOptions().colors[2]
+            }
+        },
+        title: {
+            text: 'Temperature',
+            style: {
+                color: Highcharts.getOptions().colors[2]
+            }
+        },
+        opposite: true
+
+    }, { // Secondary yAxis
+        gridLineWidth: 0,
+        title: {
+            text: 'Humidity',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        labels: {
+            format: '{value} %',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        }
+
+    }],
+    tooltip: {
+        shared: true
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'left',
+        x: 80,
+        verticalAlign: 'top',
+        y: 55,
+        floating: true,
+        backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+    },
+    series: [{
+        name: 'Humidity',
+        type: 'column',
+        yAxis: 1,
+        data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+        tooltip: {
+            valueSuffix: ' %'
+        }
+
+    }, {
+        name: 'Temperature',
+        type: 'spline',
+        data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+        tooltip: {
+            valueSuffix: ' °C'
+        }
+    }]
+});
+		</script>
+					</div>
+					</div>
+				</div>
 			</section>
+
 			<!-- End About Area -->
 
 			
