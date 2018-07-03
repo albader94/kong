@@ -35,8 +35,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `kong`.`Sensor` (
   `SensorID` INT NOT NULL AUTO_INCREMENT COMMENT 'Surrogate key',
-  `SensorTemperature` DECIMAL(5,2) NOT NULL COMMENT '17.56 degreesC',
-  `SensorHumidity` DECIMAL(5,4) NOT NULL COMMENT '98.52% = 0.9852',
+  `SensorTemperature` FLOAT(5,2) NOT NULL COMMENT '17.56 degreesC',
+  `SensorHumidity` FLOAT(5,2) NOT NULL COMMENT '98.52%',
   `SensorDT` DATETIME(0) NOT NULL,
   PRIMARY KEY (`SensorID`),
   UNIQUE INDEX `SensorID_UNIQUE` (`SensorID` ASC),
