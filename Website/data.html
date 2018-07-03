@@ -71,7 +71,8 @@
 
 Highcharts.chart('chart-A', {
     chart: {
-        zoomType: 'xy'
+        zoomType: 'xy',
+        backgroundColor: '#E0CFDB'
     },
     title: {
         text: 'Daily Temperature and Humidity Overview'
@@ -85,29 +86,31 @@ Highcharts.chart('chart-A', {
         labels: {
             format: '{value}°C',
             style: {
-                color: Highcharts.getOptions().colors[2]
+                color: '#000000'
             }
         },
         title: {
             text: 'Temperature',
             style: {
-                color: Highcharts.getOptions().colors[2]
+                color: '#000000'
             }
         },
-        opposite: true
+        opposite: true,
+        gridLineColor: '#696969'
+
 
     }, { // Secondary yAxis
         gridLineWidth: 0,
         title: {
             text: 'Humidity',
             style: {
-                color: Highcharts.getOptions().colors[0]
+                color: '#5A41AB'
             }
         },
         labels: {
             format: '{value} %',
             style: {
-                color: Highcharts.getOptions().colors[0]
+                color: '#5A41AB'
             }
         }
 
@@ -127,6 +130,7 @@ Highcharts.chart('chart-A', {
     series: [{
         name: 'Humidity',
         type: 'column',
+        color: '#5A41AB',
         yAxis: 1,
         data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
         tooltip: {
@@ -135,6 +139,7 @@ Highcharts.chart('chart-A', {
 
     }, {
         name: 'Temperature',
+        color: '#000000',
         type: 'spline',
         data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
         tooltip: {
@@ -145,13 +150,13 @@ Highcharts.chart('chart-A', {
 		</script>
 						</div>
 						<div class="about-details col-lg-6 col-md-12">
-							<h2>
-								<span>Welcome, %u ! </span>
+							<h2 style="text-align:center;">
+								<span>Welcome, Greenthumb ! </span>
 							</h2>
-							<p>
+							<p style="text-align: center;">
 								Current Temperature: %t
 							</p>
-							<p>
+							<p style="text-align: center;">
 								Current Humidity: %h
 							</p>
 						</div>
@@ -168,7 +173,8 @@ Highcharts.chart('chart-A', {
 
 Highcharts.chart('chart-B', {
     chart: {
-        zoomType: 'xy'
+        zoomType: 'xy',
+        backgroundColor: '#E0CFDB'
     },
     title: {
         text: 'Weekly Temperature and Humidity Overview'
@@ -182,29 +188,30 @@ Highcharts.chart('chart-B', {
         labels: {
             format: '{value}°C',
             style: {
-                color: Highcharts.getOptions().colors[2]
+                color: '#000000'
             }
         },
         title: {
             text: 'Temperature',
             style: {
-                color: Highcharts.getOptions().colors[2]
+                color: '#000000'
             }
         },
-        opposite: true
+        opposite: true,
+        gridLineColor: '#696969'
 
     }, { // Secondary yAxis
         gridLineWidth: 0,
         title: {
             text: 'Humidity',
             style: {
-                color: Highcharts.getOptions().colors[0]
+                color: '#5A41AB'
             }
         },
         labels: {
             format: '{value} %',
             style: {
-                color: Highcharts.getOptions().colors[0]
+                color: '#5A41AB'
             }
         }
 
@@ -224,6 +231,7 @@ Highcharts.chart('chart-B', {
     series: [{
         name: 'Humidity',
         type: 'column',
+        color: '#5A41AB',
         yAxis: 1,
         data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
         tooltip: {
@@ -233,6 +241,7 @@ Highcharts.chart('chart-B', {
     }, {
         name: 'Temperature',
         type: 'spline',
+        color: '#000000',
         data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
         tooltip: {
             valueSuffix: ' °C'
@@ -250,7 +259,8 @@ Highcharts.chart('chart-B', {
 
 Highcharts.chart('chart-C', {
     chart: {
-        zoomType: 'xy'
+        zoomType: 'xy',
+        backgroundColor: '#E0CFDB'
     },
     title: {
         text: 'Monthly Temperature and Humidity Overview'
@@ -264,29 +274,30 @@ Highcharts.chart('chart-C', {
         labels: {
             format: '{value}°C',
             style: {
-                color: Highcharts.getOptions().colors[2]
+                color: '#000000'
             }
         },
         title: {
             text: 'Temperature',
             style: {
-                color: Highcharts.getOptions().colors[2]
+                color: '#000000'
             }
         },
-        opposite: true
+        opposite: true,
+        gridLineColor: '#696969'
 
     }, { // Secondary yAxis
         gridLineWidth: 0,
         title: {
             text: 'Humidity',
             style: {
-                color: Highcharts.getOptions().colors[0]
+                color: '#5A41AB'
             }
         },
         labels: {
             format: '{value} %',
             style: {
-                color: Highcharts.getOptions().colors[0]
+                color: '#5A41AB'
             }
         }
 
@@ -308,6 +319,7 @@ Highcharts.chart('chart-C', {
         type: 'column',
         yAxis: 1,
         data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+        color: '#5A41AB',
         tooltip: {
             valueSuffix: ' %'
         }
@@ -316,6 +328,7 @@ Highcharts.chart('chart-C', {
         name: 'Temperature',
         type: 'spline',
         data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+        color: '#000000',
         tooltip: {
             valueSuffix: ' °C'
         }
