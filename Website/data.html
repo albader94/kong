@@ -132,7 +132,7 @@ Highcharts.chart('chart-A', {
         type: 'column',
         color: '#5A41AB',
         yAxis: 1,
-        data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+        data: [43.8, 42.3, 38.9, 38.9, 38.9, 38.9, 38.9, 37.3, 37.3, 33.1, 33.2, 34.3],
         tooltip: {
             valueSuffix: ' %'
         }
@@ -141,7 +141,7 @@ Highcharts.chart('chart-A', {
         name: 'Temperature',
         color: '#000000',
         type: 'spline',
-        data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+        data: [20.4, 19.4, 19.5, 20.5, 22.0, 23.7, 24.0, 24.6, 24.6, 22.8, 21.9, 21.0],
         tooltip: {
             valueSuffix: ' °C'
         }
@@ -151,13 +151,13 @@ Highcharts.chart('chart-A', {
 						</div>
 						<div class="about-details col-lg-6 col-md-12">
 							<h2 style="text-align:center;">
-								<span>Welcome, Greenthumb ! </span>
+								<span>Welcome to your Control Panel! </span>
 							</h2>
-							<p style="text-align: center;">
-								Current Temperature: %t
+							<p style="text-align: center; color: #FFFFFF; font-size: 18px;">
+								Current Temperature: 21.0 Celsius
 							</p>
-							<p style="text-align: center;">
-								Current Humidity: %h
+							<p style="text-align: center; color: #FFFFFF; font-size: 18px;">
+								Current Humidity: 34.3 %
 							</p>
 						</div>
 					</div>
@@ -180,7 +180,7 @@ Highcharts.chart('chart-B', {
         text: 'Weekly Temperature and Humidity Overview'
     },
     xAxis: [{
-        categories: ['Sun 0:00', 'Sun 12:00', 'Mon 0:00', 'Mon 12:00', 'Tues 0:00', 'Tues 12:00',
+        categories: ['Sat 0:00', 'Sat 12:00', 'Sun 0:00', 'Sun 12:00', 'Mon 0:00', 'Mon 12:00', 'Tues 0:00', 'Tues 12:00',
             'Wed 0:00', 'Wed 12:00', 'Thurs 0:00', 'Thurs 12:00', 'Fri 0:00', 'Fri 12:00'],
         crosshair: true
     }],
@@ -221,8 +221,8 @@ Highcharts.chart('chart-B', {
     },
     legend: {
         layout: 'vertical',
-        align: 'left',
-        x: 80,
+        align: 'right',
+        x: -80,
         verticalAlign: 'top',
         y: 55,
         floating: true,
@@ -233,7 +233,7 @@ Highcharts.chart('chart-B', {
         type: 'column',
         color: '#5A41AB',
         yAxis: 1,
-        data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+        data: [80.7, 83.2, 85.7, 82.1, 69.3, 47.8, 38.9, 38.9, 38.9, 36.2, 37.3, 33.1, 33.2, 34.3],
         tooltip: {
             valueSuffix: ' %'
         }
@@ -242,7 +242,7 @@ Highcharts.chart('chart-B', {
         name: 'Temperature',
         type: 'spline',
         color: '#000000',
-        data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+        data: [17.3, 21.9, 17.0, 21.0, 17.4, 21.9, 19.2, 23.9, 19.6, 24.2, 19.0, 24.6, 19.5, 24.9],
         tooltip: {
             valueSuffix: ' °C'
         }
@@ -263,10 +263,10 @@ Highcharts.chart('chart-C', {
         backgroundColor: '#E0CFDB'
     },
     title: {
-        text: 'Monthly Temperature and Humidity Overview'
+        text: 'Fortnight Temperature and Humidity Overview'
     },
     xAxis: [{
-        categories: ['Last Mon', 'Last Tues', 'Last Wed', 'Last Thurs', 'Last Fri', 'Sat',
+        categories: ['Last Sat', 'Last Sun', 'Last Mon', 'Last Tues', 'Last Wed', 'Last Thurs', 'Last Fri', 'Sat',
             'Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri'],
         crosshair: true
     }],
@@ -307,8 +307,8 @@ Highcharts.chart('chart-C', {
     },
     legend: {
         layout: 'vertical',
-        align: 'left',
-        x: 80,
+        align: 'right',
+        x: -80,
         verticalAlign: 'top',
         y: 55,
         floating: true,
@@ -318,7 +318,7 @@ Highcharts.chart('chart-C', {
         name: 'Humidity',
         type: 'column',
         yAxis: 1,
-        data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+        data: [43.8, 42.3, 38.9, 38.9, 38.9, 38.9, 54.7, 83.2, 82.1, 47.8, 33.2, 34.3, 37.3, 37.3],
         color: '#5A41AB',
         tooltip: {
             valueSuffix: ' %'
@@ -327,7 +327,7 @@ Highcharts.chart('chart-C', {
     }, {
         name: 'Temperature',
         type: 'spline',
-        data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+        data: [24.3, 23.8, 24.0, 24.0, 24.0, 24.0, 21.3, 21.9, 21.0, 21.9, 24.9, 24.9, 24.6, 24.6],
         color: '#000000',
         tooltip: {
             valueSuffix: ' °C'
