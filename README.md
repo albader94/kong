@@ -1,6 +1,6 @@
 # Kong Grow - Greenhouse Monitoring System
 
-## Team Members: Jacob Tran, Tyler Valentine, Bader Albader, Garret Senor
+## Team Members: Jacob Tran, Tyler Valentine, Bader Albader, Garret Senor, Charles Mezhir
 
 ## Description: 
 Kong Grow is a premier greenhouse monitoring system that allows for 
